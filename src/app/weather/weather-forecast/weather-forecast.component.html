@@ -8,10 +8,10 @@
     <mat-grid-tile class="forecast-icon">
        <app-weather-icon [weatherInfo]="forecast?.info"></app-weather-icon>
    </mat-grid-tile>
-    <mat-grid-tile class="forecast-temp-up">
-        <i class="wi wi-direction-up"></i> {{forecast.maxTemperature}} ºC
-    </mat-grid-tile>
-    <mat-grid-tile class="forecast-temp-down">
-        <i class="wi wi-direction-down"></i> {{forecast.minTemperature}} ºC
-    </mat-grid-tile>
+   <mat-grid-tile class="forecast-temp-up">
+      <i class="wi wi-direction-up"></i> {{forecast?.maxTemperature | celsius}}
+  </mat-grid-tile>
+  <mat-grid-tile class="forecast-temp-down">
+      <i class="wi wi-direction-down"></i> {{forecast?.minTemperature | celsius}}
+  </mat-grid-tile>
 </mat-grid-list>

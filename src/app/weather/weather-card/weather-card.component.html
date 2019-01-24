@@ -26,15 +26,15 @@
         {{weather.info | lowercase}}
       </mat-grid-tile>
       <mat-grid-tile class="weather-info-temp-up">
-        <i class="wi wi-direction-up"></i> {{weather.maxtemperature}} ºC
-      </mat-grid-tile>
-      <mat-grid-tile class="weather-info-temp-down">
-        <i class="wi wi-direction-down"></i> {{weather.mintemperature}} ºC
-      </mat-grid-tile>
+    <i class="wi wi-direction-up"></i> {{weather.maxtemperature | celsius}}
+    </mat-grid-tile>
+    <mat-grid-tile class="weather-info-temp-down">
+    <i class="wi wi-direction-down"></i> {{weather.mintemperature | celsius}}
+    </mat-grid-tile>
     </mat-grid-list>
     <mat-grid-list cols="1" rowHeight="80px">
       <mat-grid-tile class="weather-info-temp">
-          <div class="number" [ngStyle]="{color: getColorTemperature()}">{{weather.temperature}}</div>
+         <div class="number" [ngStyle]="{color: getColorTemperature()}">{{weather.temperature | celsius: false}}</div>
         <div class="measure">ºC</div>
       </mat-grid-tile>
     </mat-grid-list>
