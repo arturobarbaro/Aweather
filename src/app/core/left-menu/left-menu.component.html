@@ -5,8 +5,8 @@
     <i class="fab fa-cloudversify font-size-20"></i>
   </mat-list-item>
   <div class="menu-list-divider"> Ciudades </div>
-  <mat-list-item>
-    <a mat-button mat-line>Madrid</a>
+  <mat-list-item *ngFor="let city of cities">
+    <a mat-button mat-line>{{city}}</a>
     <i class="fas fa-map-marker-alt font-size-20"></i>
   </mat-list-item>
 </mat-list>

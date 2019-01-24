@@ -1,8 +1,8 @@
 <mat-card class="weather-card">
   <mat-card-header class="weather-header">
-    <div mat-card-avatar class="weather-header-icon">
-      <i class="wi wi-day-sunny"></i>
-    </div>
+      <div mat-card-avatar class="weather-header-icon">
+        <app-weather-icon [weatherInfo]="weather.info"></app-weather-icon>
+      </div>
     <mat-card-title>{{weather.city}}</mat-card-title>
     <mat-card-subtitle>{{weather.hourMessure}}</mat-card-subtitle>
   </mat-card-header>
