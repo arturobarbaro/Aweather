@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   sidebarMode = 'side';
-  cityName= 'app';
+  cityName = 'app';
 
   public search(cityName: string): void {
     this.cityName = cityName;

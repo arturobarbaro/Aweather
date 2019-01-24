@@ -1,6 +1,6 @@
-import { Forecast } from './forecast.model';
+import { Forescast } from './forescast.model';
 
-export class Weather{
+export class Weather {
     city: string;
     date: string;
     temperature: number;
@@ -13,7 +13,7 @@ export class Weather{
     mintemperature: number;
     sunrise: string;
     sunset: string;
-    forecast: Forecast;
+    forecasts: Array<Forescast>;
 
     get percentToSunset(): number {
         if (this.sunrise === undefined) {

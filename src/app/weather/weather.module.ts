@@ -7,19 +7,19 @@ import { WeatherSearchComponent } from './weather-search/weather-search.componen
 import { WeatherService } from './services/weather.service';
 
 @NgModule({
-  declarations: [
-      WeatherCardComponent,
-      WeatherForecastComponent,
-      WeatherSearchComponent
-  ],
   imports: [
     CommonModule,
     SharedModule
   ],
+  declarations: [
+    WeatherCardComponent,
+    WeatherForecastComponent,
+    WeatherSearchComponent
+  ],
+  providers: [WeatherService],
   exports: [
     WeatherCardComponent,
     WeatherSearchComponent
-],
-  providers: [WeatherService],
+  ]
 })
 export class WeatherModule { }
