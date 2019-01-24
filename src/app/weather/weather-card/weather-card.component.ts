@@ -45,4 +45,16 @@ export class WeatherCardComponent implements OnInit {
 
     console.log(this.weather);
   }
+
+  public getColorTemperature(): string {
+    if (this.weather !== undefined && this.weather.temperature >= 24) {
+      return '#EF6C00';
+    }
+
+    if (this.weather !== undefined && this.weather.temperature <= 10) {
+      return '#0277BD';
+    }
+
+    return '#212121';
+  }
 }

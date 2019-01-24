@@ -34,7 +34,7 @@
     </mat-grid-list>
     <mat-grid-list cols="1" rowHeight="80px">
       <mat-grid-tile class="weather-info-temp">
-        <div class="number">{{weather.temperature}}</div>
+          <div class="number" [ngStyle]="{color: getColorTemperature()}">{{weather.temperature}}</div>
         <div class="measure">ºC</div>
       </mat-grid-tile>
     </mat-grid-list>
