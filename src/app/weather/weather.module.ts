@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
 import { WeatherSearchComponent } from './weather-search/weather-search.component';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { WeatherSearchComponent } from './weather-search/weather-search.componen
   exports: [
     WeatherCardComponent,
     WeatherSearchComponent
-  ]
+],
+  providers: [WeatherService],
 })
 export class WeatherModule { }

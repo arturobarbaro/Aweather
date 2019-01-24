@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Weather } from '../weather.model';
 import { Forecast } from '../forecast.model';
 
-
 @Component({
   selector: 'app-weather-card',
   templateUrl: './weather-card.component.html',
