@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Weather } from '../weather.model';
+import { Forecast } from '../forecast.model';
+
 
 @Component({
   selector: 'app-weather-card',
@@ -30,6 +32,13 @@ export class WeatherCardComponent implements OnInit {
       this.weather.temperature = 18;
       this.weather.winddirection = 270;
       this.weather.windspeed = 26;
+      this.weather.forecast = new Forecast();
+      this.weather.forecast.date = '04 May 2018';
+      this.weather.forecast.day = 'Fri';
+      this.weather.forecast.info = 'Mostly Cloudy';
+      this.weather.forecast.maxTemperature = 23;
+      this.weather.forecast.minTemperature = 8;
+
       console.log('call to server finalizado');
       console.log(this.weather);
   }, 2000);
