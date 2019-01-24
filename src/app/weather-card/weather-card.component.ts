@@ -9,11 +9,13 @@ import { Weather } from '../weather.model';
 export class WeatherCardComponent implements OnInit {
 
   weather: Weather = new Weather();
+  rutaImagen: string;
 
   constructor() { }
 
   ngOnInit() {
     console.log('ngOnInit');
+    this.rutaImagen = 'https://drive.google.com/uc?id=1DRGmofyk2KbKvY8HF8vvqcBGj7VRXKnY';
 
     setTimeout(() => {
       this.weather.city = 'Madrid';

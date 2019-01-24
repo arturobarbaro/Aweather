@@ -45,7 +45,7 @@
         <i class="wi wi-sunrise"></i>
       </mat-grid-tile>
       <mat-grid-tile colspan="3">
-        <mat-progress-spinner class="sunrise-sunset-spinner" diameter="120" strokeWidth="110" mode="determinate" value="30">
+        <mat-progress-spinner class="sunrise-sunset-spinner" diameter="120" strokeWidth="110" mode="determinate" [value]="weather.percentToSunset">
         </mat-progress-spinner>
       </mat-grid-tile>
       <mat-grid-tile class="weather-info-sunset">
