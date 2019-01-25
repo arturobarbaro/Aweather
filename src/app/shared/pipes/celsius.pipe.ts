@@ -13,4 +13,5 @@ export class CelsiusPipe implements PipeTransform {
     const celsiusValue = (value - 32) * 5.0 / 9.0;
     return `${Math.round(celsiusValue).toString()} ${symbol ? 'ºC' : ''}`;
   }
+
 }

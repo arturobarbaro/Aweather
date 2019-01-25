@@ -1,4 +1,4 @@
-export class Forecast {
+export class Forescast {
     date: string;
     day: string;
     maxTemperature: number;

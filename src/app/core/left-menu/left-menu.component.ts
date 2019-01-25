@@ -12,9 +12,11 @@ export class LeftMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      this.cities.push('Madrid, ES');
-      this.cities.push('Barcelona, ES');
-      this.cities.push('Sevilla, ES');
-      this.cities.push('Cádiz, ES');
+    this.cities.push('Madrid, ES');
+    this.cities.push('Barcelona, ES');
+    this.cities.push('Sevilla, ES');
+    this.cities.push('Malaga, ES');
+    this.cities.push('Santander, ES');
   }
+
 }

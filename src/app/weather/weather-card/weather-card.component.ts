@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Weather } from '../weather.model';
-import { Forecast } from '../forescast.model';
+import { Forescast } from '../forescast.model';
 import { WeatherService } from '../services/weather.service';
 
 @Component({
@@ -24,6 +24,9 @@ export class WeatherCardComponent implements OnInit {
         } else {
           this.weather = this._weatherService.mapResult(data['query'].results.channel);
         }
+      },
+      error => {
+        alert(error.message);
       }
     );
   }
