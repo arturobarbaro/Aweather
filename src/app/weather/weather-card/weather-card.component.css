@@ -16,7 +16,7 @@
     left: 0;
     top: 0;
     content: ' ';
-    z-index: 1;
+    z-index: 1; 
     opacity: 0.8;
     background-image: url('https://drive.google.com/uc?id=1DRGmofyk2KbKvY8HF8vvqcBGj7VRXKnY');
 }
@@ -78,7 +78,7 @@
 
 .weather-info-temp .number {
     font-size: 80px;
-    font-weight: bolder;
+    font-weight: bolder;    
 }
 
 .weather-info-temp .measure {
@@ -112,6 +112,7 @@
 
 .weather-info-sunset {
     margin-left: -16px;
+    
 }
 
 .weather-info-sunset .wi {
