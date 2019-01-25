@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Forescast } from '../forescast.model';
+import { Forecast } from '../forescast.model';
 
 @Component({
   selector: 'app-weather-forecast',
@@ -8,7 +8,7 @@ import { Forescast } from '../forescast.model';
 })
 export class WeatherForecastComponent {
 
-  @Input() forecasts: Array<Forescast>;
+  @Input() forecasts: Array<Forecast>;
 
   constructor() { }
 }
