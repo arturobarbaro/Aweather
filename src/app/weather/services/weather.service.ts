@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Weather } from '../weather.model';
-import { Forecast } from '../forescast.model';
+import { Forescast } from '../forescast.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -35,9 +35,9 @@ export class WeatherService {
     weatherInfo.temperature = result.item.condition.temp;
     weatherInfo.winddirection = result.wind.direction;
     weatherInfo.windspeed = result.wind.speed;
-    weatherInfo.forecasts = new Array<Forecast>();
+    weatherInfo.forecasts = new Array<Forescast>();
     for (const forecast of result.item.forecast) {
-      const newForecast = new Forecast();
+      const newForecast = new Forescast();
       newForecast.date = forecast.date;
       newForecast.day = forecast.day;
       newForecast.maxTemperature = forecast.high;
@@ -47,4 +47,5 @@ export class WeatherService {
     }
     return weatherInfo;
   }
+
 }
