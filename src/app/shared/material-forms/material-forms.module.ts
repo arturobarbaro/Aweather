@@ -12,7 +12,7 @@ import {
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   exports: [
@@ -27,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatSidenavModule,
     // Forms
+    ReactiveFormsModule,
     FormsModule
   ],
   declarations: []
