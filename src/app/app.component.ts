@@ -7,7 +7,6 @@ import { Component, NgZone } from '@angular/core';
 })
 export class AppComponent {
   cityName = 'app';
-  sidebarMode = 'side';
 
   constructor() {
   }
