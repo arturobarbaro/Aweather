@@ -20,22 +20,22 @@ export class WeatherCardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._activatedRoute.params.subscribe(params => {
-      this.cityName = <string>(params['cityName'] ? params['cityName'] : 'Madrid, ES');
-      this._weatherService.getWeatherInfo(this.cityName).subscribe(
-        data => {
-          if (data['query'].results === undefined) {
-            alert('La ciudad buscada no existe');
-          } else {
-            this.weather = this._weatherService.mapResult(data['query'].results.channel);
-          }
-        },
-        error => {
-          alert(error.message);
-        }
-      );
-    });
-  }
+   this._activatedRoute.params.subscribe(params =&gt; {
+     this.cityName = <string>(params['cityName'] ? params['cityName'] : 'Madrid, ES');
+     this._weatherService.getWeatherInfo(this.cityName).subscribe(
+       data =&gt; {
+         if (data['location'] === undefined) {
+           alert('La ciudad buscada no existe');
+         } else {
+           this.weather = this._weatherService.mapResult(data);
+         }
+       },
+       error =&gt; {
+         alert(error.message);
+       }
+     );
+   });
+ }
 
   public getColorTemperature(): string {
     if (this.weather !== undefined && this.weather.temperature >= 24) {
